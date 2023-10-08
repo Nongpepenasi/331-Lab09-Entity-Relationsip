@@ -11,6 +11,9 @@ import org.springframework.web.server.ResponseStatusException;
 import se331.lab.rest.entity.Event;
 
 import jakarta.annotation.PostConstruct;
+import se331.lab.rest.entity.EventDTO;
+import se331.lab.rest.entity.EventParticipantDTO;
+import se331.lab.rest.entity.Participant;
 import se331.lab.rest.service.EventService;
 import se331.lab.rest.util.LabMapper;
 

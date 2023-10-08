@@ -1,8 +1,10 @@
 package se331.lab.rest.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -18,5 +20,7 @@ public class Participant {
     String name;
     String telNo;
     @ManyToMany
-    List<Event> eventHistory;
+    @Builder.Default
+    @JsonBackReference
+    List<Event> eventHistory = new ArrayList<>();
 }
